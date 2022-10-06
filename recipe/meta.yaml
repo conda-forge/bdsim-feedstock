@@ -16,7 +16,7 @@ build:
     - bdedit=bdsim.bdedit:main
     - bdrun=bdsim:bdrun
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
