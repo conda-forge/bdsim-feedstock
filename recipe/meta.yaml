@@ -17,7 +17,7 @@ build:
     - bdrun=bdsim:bdrun
   noarch: python
   script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
