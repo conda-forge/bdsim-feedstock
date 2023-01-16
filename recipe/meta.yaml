@@ -1,5 +1,5 @@
 {% set name = "bdsim" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
-  sha256: 63544d52908ae34046041e5ce5783eb407a48ab977cc43b1faee91ad4dd04275
-  patches:
-    - 10.patch
+  sha256: 4fdbfa6e286a911d44795dd4c10f6cbaf03d1e8d853add2f657c17630602be67
 
 build:
   entry_points:
@@ -17,7 +15,7 @@ build:
     - bdrun=bdsim:bdrun
   noarch: python
   script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
