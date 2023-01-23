@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
   sha256: a823478bdf79008850c35fef5a915ca8da02bda5dcb991d9a98ec8e08a0205d3
+  patches:
+    - 15.patch
 
 build:
   entry_points:
