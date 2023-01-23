@@ -29,6 +29,8 @@ requirements:
     - spatialmath-python
     - ansitable
     - pyqt
+    - colored
+    - progress
 
 test:
   imports:
