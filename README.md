@@ -1,11 +1,11 @@
-About bdsim
-===========
+About bdsim-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bdsim-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/petercorke/bdsim
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bdsim-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simulate dynamic systems expressed in block diagram form using Python.
 
