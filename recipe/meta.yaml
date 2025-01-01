@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
   sha256: c82b1093a5f639f5a48aa3c77ea47f8f944b4b3617085b18ab2ec1584d67f4d3
 
 build:
@@ -15,14 +15,15 @@ build:
     - bdrun=bdsim:bdrun
   noarch: python
   script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - matplotlib-base
@@ -40,6 +41,7 @@ test:
     - bdrun --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/petercorke/bdsim
