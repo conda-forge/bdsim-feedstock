@@ -35,6 +35,10 @@ requirements:
     - ansitable
     - pyqt
     - progress
+    - pyside6
+    - pillow
+    - ipywidgets
+    - ipympl
 
 test:
   imports:
