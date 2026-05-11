@@ -11,8 +11,11 @@ source:
 
 build:
   entry_points:
-    - bdedit=bdsim.bdedit:main
-    - bdrun=bdsim:bdrun
+    - bdedit=bdedit.bdedit:main
+    - bdrun=bdsim.bin.bdrun:bdrun
+    - bdtex2icon=bdsim.tex2icon:main
+    - bdedit-app=bdedit.make_app:make_app
+    - bdedit-associate-windows=bdedit.associate_bd_windows:main
   noarch: python
   script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
   number: 0
