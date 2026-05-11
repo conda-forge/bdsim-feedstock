@@ -1,5 +1,5 @@
 {% set name = "bdsim" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,25 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
-  sha256: c82b1093a5f639f5a48aa3c77ea47f8f944b4b3617085b18ab2ec1584d67f4d3
+  sha256: 661ea067c3c3ffe49ca915231c2fab90539490b39b68afd02fcf6fedbe3acef7
 
 build:
   entry_points:
-    - bdedit=bdsim.bdedit:main
-    - bdrun=bdsim:bdrun
+    - bdedit=bdedit.bdedit:main
+    - bdrun=bdsim.bin.bdrun:bdrun
+    - bdtex2icon=bdsim.tex2icon:main
+    - bdedit-app=bdedit.make_app:make_app
+    - bdedit-associate-windows=bdedit.associate_bd_windows:main
   noarch: python
   script: echo "${PKG_VERSION}" > RELEASE && {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - numpy
@@ -31,6 +35,10 @@ requirements:
     - ansitable
     - pyqt
     - progress
+    - pyside6
+    - pillow
+    - ipywidgets
+    - ipympl
 
 test:
   imports:
