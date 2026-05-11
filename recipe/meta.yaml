@@ -22,6 +22,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - numpy
