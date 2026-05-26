@@ -1,5 +1,5 @@
 {% set name = "bdsim" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
-  sha256: 661ea067c3c3ffe49ca915231c2fab90539490b39b68afd02fcf6fedbe3acef7
+  sha256: 65a4c6a38b4a17cd2103bff808480844e55c756c3e33acd07971fc4b96b57aeb
 
 build:
   entry_points:
