@@ -1,5 +1,5 @@
 {% set name = "bdsim" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/bdsim-{{ version }}.tar.gz
-  sha256: 4b97c47576930dc98a77b0ddbd0476131e1957219a71098c4f0795aa327e8456
+  sha256: c69811e8a11d319435585866a9d3a205fe6f686c9c4fa5a102a0fba2122c3085
 
 build:
   entry_points:
